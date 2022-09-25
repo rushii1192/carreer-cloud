@@ -134,7 +134,7 @@
   top: 100%;
   position: absolute;
   text-align: left;
-  border-top: 2px solid #89ba16;
+  border-top: 2px solid #16ba9c;
   -webkit-box-shadow: 0 2px 20px -2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 20px -2px rgba(0, 0, 0, 0.2);
   padding: 0px 0;
@@ -183,7 +183,7 @@
 
 .site-navbar .site-navigation .site-menu .has-children .dropdown a.active {
   background: #ebeef0;
-  color: #89ba16;
+  color: #16ba9c;
 }
 
 .site-navbar .site-navigation .site-menu .has-children .dropdown>li {
@@ -210,7 +210,7 @@
 
 .site-navbar .site-navigation .site-menu .has-children .dropdown>li.has-children>a.active {
   background: #ebeef0;
-  color: #89ba16;
+  color: #16ba9c;
 }
 
 .site-navbar .site-navigation .site-menu .has-children .dropdown>li.has-children>.dropdown, .site-navbar .site-navigation .site-menu .has-children .dropdown>li.has-children>ul {
@@ -258,7 +258,7 @@
 }
 
 .site-navbar .site-navigation .site-menu.site-menu-dark>li>a:hover, .site-navbar .site-navigation .site-menu.site-menu-dark>li>a.active {
-  color: #89ba16;
+  color: #16ba9c;
   position: relative;
 }
 
@@ -363,7 +363,7 @@
 }
 
 .site-mobile-menu .site-nav-wrap a:hover {
-  color: #89ba16;
+  color: #16ba9c;
   text-decoration: none;
 }
 
@@ -556,7 +556,7 @@
 
 .sticky-wrapper.is-sticky .site-navbar .site-menu>li>a:after {
   height: 2px;
-  background: #89ba16;
+  background: #16ba9c;
   content: "";
   position: absolute;
   bottom: 0;
@@ -571,7 +571,7 @@
 }
 
 .sticky-wrapper.is-sticky .site-navbar .site-menu>li>a:hover, .sticky-wrapper.is-sticky .site-navbar .site-menu>li>a.active {
-  color: #89ba16;
+  color: #16ba9c;
   position: relative;
 }
 
@@ -827,7 +827,7 @@ h1, h2, h3, h4 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(137, 186, 22, 0.9);
+  background: #17a2b8;
   z-index: 1;
 }
 
@@ -847,7 +847,7 @@ h1, h2, h3, h4 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(137, 186, 22, 0.9);
+  background: #16ba9c;
   z-index: 1;
 }
 
@@ -1054,7 +1054,7 @@ h1, h2, h3, h4 {
 }
 
 .job-listings .job-listing a:hover {
-  border-left: 7px solid #89ba16;
+  border-left: 7px solid #16ba9c;
 }
 
 .job-listings .job-listing .job-listing-logo {
@@ -1103,7 +1103,7 @@ h1, h2, h3, h4 {
 }
 
 .custom-breadcrumbs a {
-  color: #89ba16;
+  color: #16ba9c;
 }
 
 .custom-breadcrumbs a:hover {
@@ -1284,7 +1284,7 @@ h1, h2, h3, h4 {
 
 .popular-keywords .keywords li a:hover {
   background: #fff;
-  color: #89ba16;
+  color: #16ba9c;
 }
 
 .btn:after, .btn:before {
@@ -1319,12 +1319,12 @@ h1, h2, h3, h4 {
 }
 
 .btn.btn-outline-primary {
-  color: #89ba16;
+  color: #16ba9c;
 }
 
 .btn.btn-outline-primary:hover {
   color: #fff;
-  background: #89ba16;
+  background: #16ba9c;
 }
 
 .custom-pagination a {
@@ -1349,9 +1349,9 @@ h1, h2, h3, h4 {
 }
 
 .custom-pagination a.active, .custom-pagination a:hover {
-  background: #89ba16;
+  background: #16ba9c;
   color: #fff;
-  border-color: #89ba16;
+  border-color: #16ba9c;
 }
 
 .border-width-2 {
@@ -1417,8 +1417,8 @@ h1, h2, h3, h4 {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  border: 1px solid #89ba16;
-  background: #89ba16;
+  border: 1px solid #16ba9c;
+  background: #16ba9c;
   margin-bottom: 1.5rem;
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
@@ -1480,7 +1480,7 @@ h1, h2, h3, h4 {
 }
 
 .block__62849 .block__16443:hover .custom-icon [class^="icon-"], .block__62849 .block__16443:hover .custom-icon [class^="flaticon-"] {
-  color: #89ba16;
+  color: #16ba9c;
 }
 
 .block__87154 {
@@ -1681,9 +1681,9 @@ h1, h2, h3, h4 {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-  background: #89ba16;
+  background: #16ba9c;
   color: #fff;
-  border: 1px solid #89ba16;
+  border: 1px solid #16ba9c;
 }
 
 .block__76208 .accordion-item .heading>a[aria-expanded="false"]:before {
@@ -1882,7 +1882,7 @@ h1, h2, h3, h4 {
   width: 40px;
   height: 40px;
   position: relative;
-  background: #89ba16;
+  background: #16ba9c;
   border-radius: 50%;
   text-decoration: none !important;
 }
@@ -1902,7 +1902,7 @@ h1, h2, h3, h4 {
 }
 
 .footer-social a:hover span, .social a:hover span {
-  color: #89ba16;
+  color: #16ba9c;
 }
 
 .social a:hover {
@@ -2095,11 +2095,11 @@ h1, h2, h3, h4 {
 }
 
 .ul-check.success li:before {
-  color: #89ba16;
+  color: #16ba9c;
 }
 
 .ul-check.primary li:before {
-  color: #89ba16;
+  color: #16ba9c;
 }
 
 .block__18514 .block__47528 li {
@@ -2170,7 +2170,7 @@ h1, h2, h3, h4 {
 }
 
 .form-control:active, .form-control:focus {
-  border-color: #89ba16 !important;
+  border-color: #16ba9c !important;
 }
 
 .comment-form-wrap {
@@ -2288,7 +2288,7 @@ h1, h2, h3, h4 {
 }
 
 .single-carousel .owl-dots .owl-dot.active>span {
-  background: #89ba16;
+  background: #16ba9c;
 }
 
 .single-carousel img {

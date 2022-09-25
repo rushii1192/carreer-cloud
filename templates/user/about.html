@@ -28,17 +28,17 @@
                     {% if user.is_authenticated %}
 
                     {% if user.is_applicant %}
-                    <a href="{% url 'applicant-feed' %}" class="btn btn-primary border-width-2 d-none d-lg-inline-block">
+                    <a href="{% url 'applicant-feed' %}" class="btn btn-info border-width-2 d-none d-lg-inline-block">
                         <span class="mr-2 icon-person_outline"></span>Hi {{ name }}</a>
                     {% else %}
-                    <a href="{% url 'company-profile' user.id %}" class="btn btn-primary border-width-2 d-none d-lg-inline-block">
+                    <a href="{% url 'company-profile' user.id %}" class="btn btn-info border-width-2 d-none d-lg-inline-block">
                         <span class="mr-2 icon-person_outline"></span>{{ user.name }}</a>
                     {% endif %}
-                    <a href="{% url 'logout' %}" class="btn btn-primary border-width-2 d-none d-lg-inline-block"><span
+                    <a href="{% url 'logout' %}" class="btn btn-info border-width-2 d-none d-lg-inline-block"><span
                             class="mr-2 icon-lock_outline"></span>Log Out</a>
                     {% else %}
                     <a href="{% url 'login' %}"
-                       class="btn btn-primary border-width-2 d-none d-lg-inline-block"><span
+                       class="btn btn-info border-width-2 d-none d-lg-inline-block"><span
                             class="mr-2 icon-lock_outline"></span>Log In</a>
                     {% endif %}
 

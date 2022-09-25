@@ -52,16 +52,16 @@
             <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
                 <div class="ml-auto">
                     {% if request.user == user and request.user.is_company %}
-                    <a class="btn btn-primary border-width-2 d-none d-lg-inline-block" href="{% url 'post-job' %}"><span
+                    <a class="btn btn-info border-width-2 d-none d-lg-inline-block" href="{% url 'post-job' %}"><span
                             class="mr-2 icon-add_circle"></span>Post Job</a>
-                    <a class="btn btn-primary border-width-2 d-none d-lg-inline-block"
+                    <a class="btn btn-info border-width-2 d-none d-lg-inline-block"
                         href="{% url 'company-edit-profile' %}"><span class="mr-2 icon-mode_edit"></span>Edit
                         Details</a>
                     {% endif %}
-                    <a class="btn btn-primary border-width-2 d-none d-lg-inline-block"
+                    <a class="btn btn-info border-width-2 d-none d-lg-inline-block"
                         href="{% url 'account-settings' request.user.id %}"><span
                             class="mr-2 icon-settings"></span>Settings</a>
-                    <a class="btn btn-primary border-width-2 d-none d-lg-inline-block" href="{% url 'logout' %}"><span
+                    <a class="btn btn-info border-width-2 d-none d-lg-inline-block" href="{% url 'logout' %}"><span
                             class="mr-2 icon-lock_outline"></span>Log Out</a>
                 </div>
                 <a class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3" href="#"><span
@@ -102,7 +102,7 @@
 
 
                             <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                                <button class="btn btn-primary btn-lg btn-block text-white btn-search" type="submit">
+                                <button class="btn btn-info btn-lg btn-block text-white btn-search" type="submit">
                                     <span class="icon-search icon mr-2"></span>Search Employee
                                 </button>
                             </div>
@@ -114,13 +114,13 @@
 
 
                     {% if request.user.is_company and request.user.companyprofilemodel.website is None %}
-                    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
+                    <a class="btn btn-info btn-xl text-uppercase js-scroll-trigger"
                         href="{% url 'company-edit-profile' %}"><i class="fa fa-plus"></i> Add Website</a>
                     {% endif %}
 
 
                     {% if request.user.is_applicant and user.companyprofilemodel.website %}
-                    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
+                    <a class="btn btn-info btn-xl text-uppercase js-scroll-trigger"
                         href="https://{{user.companyprofilemodel.website}}" target="_blank"><span
                             class="mr-2 icon-link"></span>VISIT US!!</a>
                     {% endif %}
@@ -192,7 +192,7 @@
 
 
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                            <button class="btn btn-primary btn-lg btn-block text-white btn-search" type="submit">
+                            <button class="btn btn-info btn-lg btn-block text-white btn-search" type="submit">
                                 <span class="icon-search icon mr-2"></span>Search Job
                             </button>
                         </div>

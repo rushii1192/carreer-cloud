@@ -42,10 +42,10 @@
                 <div class="ml-auto">
                     {% if request.user == user and request.user.is_company %}
                     <a href="{% url 'post-job' %}"
-                       class="btn btn-primary border-width-2 d-none d-lg-inline-block"><span
+                       class="btn btn-info border-width-2 d-none d-lg-inline-block"><span
                             class="mr-2 icon-add_circle"></span>Post Job</a>
                     {% endif %}
-                    <a href="{% url 'logout' %}" class="btn btn-primary border-width-2 d-none d-lg-inline-block"><span
+                    <a href="{% url 'logout' %}" class="btn btn-info border-width-2 d-none d-lg-inline-block"><span
                             class="mr-2 icon-lock_outline"></span>Log Out</a>
                 </div>
                 <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span
@@ -103,10 +103,10 @@
 
                     {% if request.user == job.user %}
                     <div class="col-6">
-                        <a href="{% url 'edit-job' job.id %}" class="btn btn-block btn-primary btn-md">Edit Job</a>
+                        <a href="{% url 'edit-job' job.id %}" class="btn btn-block btn-info btn-md">Edit Job</a>
                     </div>
                     <div class="col-6">
-                        <a href="{% url 'applicant-list' job.id %}" class="btn btn-block btn-primary btn-md">Applicant
+                        <a href="{% url 'applicant-list' job.id %}" class="btn btn-block btn-info btn-md">Applicant
                             list</a>
                     </div>
 
@@ -142,7 +142,7 @@
                                 <button class="btn btn-block btn-outline-danger " type="submit">Cancel Application
                                 </button>
                                 {% else %}
-                                <button class="btn btn-block btn-primary " type="submit">Apply Now</button>
+                                <button class="btn btn-block btn-info " type="submit">Apply Now</button>
                                 {% endif %}
                             </div>
                         </form>
