@@ -1,22 +1,21 @@
-{% extends "job/base.html" %}
-{% load static %}
-
-{% block content %}
+{% extends "job/base.html" %} {% load static %} {% block content %}
 
 <!-- NAVBAR -->
 <header class="site-navbar mt-3">
     <div class="container-fluid">
         <div class="row align-items-center">
             <div class="site-logo col-6">
-                <div class="site-logo col-6"><a href="{% url 'home' %}">JobLand</a></div>
+                <div class="site-logo col-6"><a href="{% url 'home' %}">Carrer Cloud</a></div>
             </div>
 
             <nav class="mx-auto site-navigation">
                 <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
                     {% if user.companyprofilemodel.logo %}
-                    <li><a href="{% url 'home' %}">
-                        <img src="{{user.companyprofilemodel.logo.url}}" style="width:70px;height:50px;">
-                    </a></li>
+                    <li>
+                        <a href="{% url 'home' %}">
+                            <img src="{{user.companyprofilemodel.logo.url}}" style="width:70px;height:50px;">
+                        </a>
+                    </li>
                     {% else %}
                     <li><a href="{% url 'home' %}">{{user.name}}</a></li>
                     {% endif %}
@@ -43,10 +42,8 @@
             <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
                 <div class="ml-auto">
                     {% if request.user == user and request.user.is_company %}
-                    <a class="btn btn-info border-width-2 d-none d-lg-inline-block"
-                       href="{% url 'post-job' %}"><span
-                            class="mr-2 icon-add_circle"></span>Post Job</a>
-                    {% endif %}
+                    <a class="btn btn-info border-width-2 d-none d-lg-inline-block" href="{% url 'post-job' %}"><span
+                            class="mr-2 icon-add_circle"></span>Post Job</a> {% endif %}
                     <a class="btn btn-info border-width-2 d-none d-lg-inline-block" href="{% url 'logout' %}"><span
                             class="mr-2 icon-lock_outline"></span>Log Out</a>
                 </div>
@@ -82,8 +79,7 @@
             <div class="col-lg-8 mb-4 mb-lg-0">
                 <div class="d-flex align-items-center">
                     <div class="border p-2 d-inline-block mr-3 rounded">
-                        <img alt="Image" src="{{job.user.companyprofilemodel.logo.url}}"
-                             style="width:120px;height:100px;">
+                        <img alt="Image" src="{{job.user.companyprofilemodel.logo.url}}" style="width:120px;height:100px;">
                     </div>
                     <div>
                         <h2><a href="{% url 'job-profile' job.id %}">{{job.job_title}}</a></h2>
@@ -91,8 +87,7 @@
                             <a class="ml-0 mr-2 mb-2" href="{% url 'company-profile' job.user.id %}"><span
                                     class="icon-briefcase mr-2"></span>{{job.user.name}}</a>
                             <span class="m-2"><span class="icon-room mr-2"></span>{{job.location}}</span>
-                            <span class="m-2"><span class="icon-clock-o mr-2"></span><span
-                                    class="text-primary">{{job.job_type}}</span></span>
+                            <span class="m-2"><span class="icon-clock-o mr-2"></span><span class="text-primary">{{job.job_type}}</span></span>
                         </div>
                     </div>
                 </div>
@@ -105,11 +100,10 @@
                         <span class="icon-align-left mr-3"></span>Applicant list
                     </h3>
 
-                        
+
 
                     <p><b>List of 65% - 100% match with Job Requirements:</b></p>
-                    {% for application in applications %}
-                    {% if job.id == application.job.id and application.percentage >= 65 %}
+                    {% for application in applications %} {% if job.id == application.job.id and application.percentage >= 65 %}
 
                     <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
                         <a href="{% url 'applicant-public-profile' application.applicant.id %}">
@@ -121,16 +115,13 @@
                             </b>
                         </a>
                     </li>
-                    {% endif %}
-                    {% endfor %}
+                    {% endif %} {% endfor %}
 
                     <hr/>
 
                     <p><b>List of 35% - 65% match with Job Requirements:</b></p>
-                    {% for application in applications %}
-                    {% if job.id == application.job.id and application.percentage >= 35 and application.percentage < 65 %}
-
-                    <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
+                    {% for application in applications %} {% if job.id == application.job.id and application.percentage >= 35 and application.percentage
+                    < 65 %} <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
                         <a href="{% url 'applicant-public-profile' application.applicant.id %}">
                             <b>{{application.applicant.name|upper}}
                                 {% if application.applicant.applicantprofilemodel.phone %}
@@ -139,28 +130,24 @@
                                 ({{application.percentage}}%)
                             </b>
                         </a>
-                    </li>
-                    {% endif %}
-                    {% endfor %}
+                        </li>
+                        {% endif %} {% endfor %}
 
-                    <hr/>
+                        <hr/>
 
-                    <p><b>List of Below 35% match with Job Requirements:</b></p>
-                    {% for application in applications %}
-                    {% if job.id == application.job.id and application.percentage < 35 %}
-
-                    <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-                        <a href="{% url 'applicant-public-profile' application.applicant.id %}">
-                            <b>{{application.applicant.name|upper}}
+                        <p><b>List of Below 35% match with Job Requirements:</b></p>
+                        {% for application in applications %} {% if job.id == application.job.id and application.percentage
+                        < 35 %} <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
+                            <a href="{% url 'applicant-public-profile' application.applicant.id %}">
+                                <b>{{application.applicant.name|upper}}
                                 {% if application.applicant.applicantprofilemodel.phone %}
                                 Phone No: {{application.applicant.applicantprofilemodel.phone}}
                                 {% endif %}
                                 ({{application.percentage}}%)
                             </b>
-                        </a>
-                    </li>
-                    {% endif %}
-                    {% endfor %}
+                            </a>
+                            </li>
+                            {% endif %} {% endfor %}
 
                 </div>
             </div>
