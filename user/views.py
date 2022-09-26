@@ -31,7 +31,7 @@ def home(request):
         'jobs_len': jobs.count(),
         'filled_job_len':filled_job.count(),
     }
-    return render(request, 'user/index.html', context)
+    return render(request, 'user/home.html', context)
 
 
 @unauthenticated_user
