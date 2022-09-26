@@ -1,9 +1,4 @@
-{% extends "user/base.html" %}
-{% load static %}
-{% load widget_tweaks %}
-
-
-{% block content %}
+{% extends "user/base.html" %} {% load static %} {% load widget_tweaks %} {% block content %}
 
 <!-- NAVBAR -->
 <header class="site-navbar mt-3">
@@ -23,11 +18,9 @@
 
             <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
                 <div class="ml-auto">
-                    <a href="{% url 'company-register' %}"
-                       class="btn btn-info border-width-2 d-none d-lg-inline-block"><span
+                    <a href="{% url 'company-register' %}" class="btn btn-info border-width-2 d-none d-lg-inline-block"><span
                             class="mr-2 icon-lock_outline"></span>Sign Up as Company</a>
-                    <a href="{% url 'applicant-register' %}"
-                       class="btn btn-info border-width-2 d-none d-lg-inline-block"><span
+                    <a href="{% url 'applicant-register' %}" class="btn btn-info border-width-2 d-none d-lg-inline-block"><span
                             class="mr-2 icon-lock_outline"></span>Sign Up as Applicant</a>
                 </div>
                 <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span
@@ -63,16 +56,12 @@
 
                     <div class="row form-group">
                         <div class="col-md-12 mb-3 mb-md-0">
-                            <label class="text-black">Email address</label>
-                            {{ form.email|add_class:"form-control"|attr:"autofocus" }}
-                            {{ form.email.errors }}
+                            <label class="text-black">Email address</label> {{ form.email|add_class:"form-control"|attr:"autofocus" }} {{ form.email.errors }}
                         </div>
                     </div>
                     <div class="row form-group mb-4">
                         <div class="col-md-12 mb-3 mb-md-0">
-                            <label class="text-black">Password</label>
-                            {{ form.password|add_class:"form-control" }}
-                            {{ form.password.errors }}
+                            <label class="text-black">Password</label> {{ form.password|add_class:"form-control" }} {{ form.password.errors }}
                         </div>
                     </div>
 
@@ -86,7 +75,7 @@
                         <p>{{ form.non_field_errors }}</p>
                     </div>
 
-                    <h6 class="mb-2">Forgot Password? <a href="{% url 'reset-password' %}">Reset Now</a></h6>
+                    <!-- <h6 class="mb-2">Forgot Password? <a href="{% url 'reset-password' %}">Reset Now</a></h6> -->
                 </form>
             </div>
         </div>

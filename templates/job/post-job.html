@@ -1,23 +1,17 @@
-{% extends "job/base.html" %}
-{% load static %}
-{% load widget_tweaks %}
-
-{% block content %}
+{% extends "job/base.html" %} {% load static %} {% load widget_tweaks %} {% block content %}
 
 <!-- NAVBAR -->
 <header class="site-navbar mt-3">
     <div class="container-fluid">
         <div class="row align-items-center">
-            <div class="site-logo col-6"><a href="{% url 'home' %}">JobLand</a></div>
+            <div class="site-logo col-6"><a href="{% url 'home' %}">Carrer Cloud</a></div>
 
 
             <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
                 <div class="ml-auto">
-                    <a href="{% url 'company-profile' user.id %}"
-                       class="btn btn-info border-width-2 d-lg-inline-block">
+                    <a href="{% url 'company-profile' user.id %}" class="btn btn-info border-width-2 d-lg-inline-block">
                         <span class="mr-2 icon-person_outline"></span>{{request.user.name}}</a>
-                    <a href="{% url 'company-edit-profile' %}"
-                       class="btn btn-info border-width-2 d-none d-lg-inline-block">
+                    <a href="{% url 'company-edit-profile' %}" class="btn btn-info border-width-2 d-none d-lg-inline-block">
                         <span class="mr-2 icon-mode_edit"></span>Edit Details</a>
                     <a href="{% url 'logout' %}" class="btn btn-info border-width-2 d-none d-lg-inline-block">
                         <span class="mr-2 icon-lock_outline"></span>Log Out</a>
@@ -63,63 +57,47 @@
             <div class="col-lg-12">
                 <form method="POST" action="" enctype="multipart/form-data" class="p-4 p-md-5 border rounded">
                     <h3 class="text-black mb-5 border-bottom pb-2">Job Form</h3>
-                    {% csrf_token %}
-                    {{ form.media }}
-
-                    {{form.is_active.as_hidden}}
+                    {% csrf_token %} {{ form.media }} {{form.is_active.as_hidden}}
 
                     <div class="form-group">
-                        <label>Upload Featured Image</label> <br>
-                        {{ form.image|add_class:"form-control" }}
+                        <label>Upload Featured Image</label> <br> {{ form.image|add_class:"form-control" }}
                     </div>
 
                     <div class="form-group">
-                        <label>Job Title</label>
-                        {{ form.job_title|add_class:"form-control" }}
+                        <label>Job Title</label> {{ form.job_title|add_class:"form-control" }}
                     </div>
                     <div class="form-group">
-                        <label>Location</label>
-                        {{ form.location|add_class:"form-control" }}
+                        <label>Location</label> {{ form.location|add_class:"form-control" }}
                     </div>
                     <div class="form-group">
-                        <label>Job Type</label>
-                        {{ form.job_type|add_class:"form-control" }}
+                        <label>Job Type</label> {{ form.job_type|add_class:"form-control" }}
                     </div>
                     <div class="form-group">
-                        <label>Job Description</label> <br>
-                        {{ form.job_desc|add_class:"form-control" }}
+                        <label>Job Description</label> <br> {{ form.job_desc|add_class:"form-control" }}
                     </div>
                     <div class="form-group">
-                        <label>Vacancy</label>
-                        {{ form.vacancy|add_class:"form-control" }}
+                        <label>Vacancy</label> {{ form.vacancy|add_class:"form-control" }}
                     </div>
                     <div class="form-group">
-                        <label>Experience Required (minimum in months)</label>
-                        {{ form.experience|add_class:"form-control" }}
+                        <label>Experience Required (minimum in months)</label> {{ form.experience|add_class:"form-control" }}
                     </div>
                     <div class="form-group">
-                        <label>Salary</label>
-                        {{ form.salary|add_class:"form-control" }}
+                        <label>Salary</label> {{ form.salary|add_class:"form-control" }}
                     </div>
                     <div class="form-group">
-                        <label>Requirements</label> <br>
-                        {{ form.requirements|add_class:"form-control" }}
+                        <label>Requirements</label> <br> {{ form.requirements|add_class:"form-control" }}
                     </div>
                     <div class="form-group">
-                        <label>Responsibilities</label> <br>
-                        {{ form.responsibilities|add_class:"form-control" }}
+                        <label>Responsibilities</label> <br> {{ form.responsibilities|add_class:"form-control" }}
                     </div>
                     <div class="form-group">
-                        <label>Application Deadline</label>
-                        {{ form.deadline|add_class:"form-control" }}
+                        <label>Application Deadline</label> {{ form.deadline|add_class:"form-control" }}
                     </div>
                     <div class="form-group">
-                        <label>Gender</label>
-                        {{ form.gender|add_class:"form-control" }}
+                        <label>Gender</label> {{ form.gender|add_class:"form-control" }}
                     </div>
                     <div class="form-group">
-                        <label>Additional Note</label> <br>
-                        {{ form.additional_note|add_class:"form-control" }}
+                        <label>Additional Note</label> <br> {{ form.additional_note|add_class:"form-control" }}
                     </div>
                     <div class="col-12">
                         <button class="btn btn-block btn-info " type="submit">{{ task }} Job</button>
