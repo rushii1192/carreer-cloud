@@ -58,9 +58,6 @@
             <div class="sidebar__title">
                 <div class="sidebar__img">
                     {%if request.user == user and request.user.is_company %}
-                    {%if user.companyprofilemodel.logo.url %}
-                    <img src="{{user.companyprofilemodel.logo.url}}" style="width:70px;height:50px;" alt="logo" />
-                    {% endif %}
                     <h1>{{ user.name }}</h1>
                     {% endif %}
                 </div>
