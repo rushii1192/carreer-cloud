@@ -6161,13 +6161,13 @@ button.bg-secondary:focus {
 }
 
 .bg-success {
-  background-color: #89ba16 !important;
+  background-color: #17a2b8 !important;
 }
 
 a.bg-success:hover, a.bg-success:focus,
 button.bg-success:hover,
 button.bg-success:focus {
-  background-color: #89ba16 !important;
+  background-color: #17a2b8 !important;
 }
 
 .bg-info {
@@ -6277,7 +6277,7 @@ button.bg-dark:focus {
 }
 
 .border-success {
-  border-color: #89ba16 !important;
+  border-color: #17a2b8 !important;
 }
 
 .border-info {

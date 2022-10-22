@@ -1197,8 +1197,7 @@ h1, h2, h3, h4 {
 }
 
 .section-hero, .section-hero>.container>.row {
-  height: 100vh;
-  min-height: 900px;
+  min-height: 470px;
 }
 
 .section-hero.inner-page, .section-hero.inner-page>.container>.row {
@@ -1220,11 +1219,11 @@ h1, h2, h3, h4 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.201);
 }
 
 .section-hero.overlay-2:before {
-  background: rgba(125, 131, 132, 0.95);
+  background: rgba(178, 180, 181, 0.95);
 }
 
 .section-hero>.container {
@@ -2053,15 +2052,15 @@ h1, h2, h3, h4 {
 }
 
 .home-section.section-hero.overlay.bg-image {
-  background-image: url('../images/hero_1.jpg');
+  background-image: url('../images/hero1.gif');
 }
 
 .py-5.bg-image.overlay-primary.fixed.overlay {
-  background-image: url('../images/hero_1.jpg');
+  background-image: url('../images/hero1.gif');
 }
 
 .section-hero.overlay.inner-page.bg-image#home-section{
-  background-image: url('../images/hero_1.jpg');
+  background-image: url('../images/hero1.gif');
 }
 
 .jm-sticky-top {

@@ -1,59 +1,9 @@
-{% extends "user/base.html" %}
-{% load static %}
+{% extends "user/company/loggedcompany.html" %}
 {% load widget_tweaks %}
 
-
-{% block content %}
-
-<!-- NAVBAR -->
-<header class="site-navbar mt-3">
-    <div class="container-fluid">
-        <div class="row align-items-center">
-            <div class="site-logo col-6"><a href="{% url 'home' %}">Career Cloud</a></div>
-
-            <nav class="mx-auto site-navigation">
-                <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
-                    <li><a href="{% url 'home' %}" class="nav-link">Home</a></li>
-                    <li><a href="{% url 'about' %}">About</a></li>
-                    <li><a href="{% url 'contact' %}">Contact</a></li>
-
-
-                </ul>
-            </nav>
-
-            <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
-                <div class="ml-auto">
-                    <a href="{% url 'home' %}"
-                       class="btn btn-info border-width-2 d-none d-lg-inline-block">Hi
-                        {{ name }}</a>
-                    <a href="{% url 'logout' %}" class="btn btn-info border-width-2 d-none d-lg-inline-block">
-                        <span class="mr-2 icon-lock_outline"></span>Log Out</a>
-                </div>
-                <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span
-                        class="icon-menu h3 m-0 p-0 mt-2"></span></a>
-            </div>
-
-        </div>
-    </div>
-</header>
-
-<!-- HOME -->
-<section class="section-hero overlay inner-page bg-image" id="home-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-7">
-                <h1 class="text-white font-weight-bold">Edit Your Account Settings</h1>
-                <div class="custom-breadcrumbs">
-                    <a href="{% url 'home' %}">Home</a> <span class="mx-2 slash">/</span>
-                    <span class="text-white"><strong>Account Settings</strong></span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="site-section">
-    <div class="container">
+{% block body %}
+<br>
+<div class="container" style="background-color: white;">
 
         <div class="row align-items-center mb-5">
             <div class="col-lg-8 mb-4 mb-lg-0">
@@ -87,7 +37,7 @@
                             {{ information_form.email.errors }}
                         </div>
                     </div>
-
+                    <br>
                     <div class="col-12">
                         <button class="btn btn-block btn-info btn-md" type="submit">Update Account Information
                         </button>
@@ -135,7 +85,7 @@
                             {{ password_form.new_password2.errors }}
                         </div>
                     </div>
-
+                    <br>
                     <div class="col-12">
                         <button class="btn btn-block btn-info btn-md" type="submit">Change Password
                         </button>
@@ -158,7 +108,7 @@
                     {% csrf_token %}
 
                     <h3 class="text-black mb-5 border-bottom pb-2">Deactivate Account</h3>
-
+                    <br>
                     <div class="col-12">
                         <button class="btn btn-block btn-outline-danger btn-md" type="submit">Deactivate Account
                         </button>
@@ -167,12 +117,4 @@
             </div>
         </div>
     </div>
-</section>
-
-<script>
-    var form_fields = document.getElementsByTagName("input")
-
-    form_fields[1].placeholder = 'Email Address'
-    form_fields[2].placeholder = 'Name'
-</script>
 {% endblock %}

@@ -340,7 +340,7 @@ def company_profile(request, pk):
         'job_list': job_list,
         'employee_list': employee_list,
     }
-    return render(request, 'user/company/company-profile.html', context)
+    return render(request, 'user/company/companydashboard.html', context)
 
 
 @login_required(login_url='login')
