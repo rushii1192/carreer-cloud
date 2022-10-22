@@ -111,23 +111,25 @@ WSGI_APPLICATION = 'carrercloud.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',    # sq-lite database
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
-        'default': {
-            'ENGINE': 'djongo',
-            'NAME': 'cluster0',
-            'ENFORCE_SCHEMA': False,
-            'CLIENT': {
-                'host': 'mongodb+srv://rushi1192:career-cloud@cluster0.wtallni.mongodb.net/?retryWrites=true&w=majority'
-            }  
-        }
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',    # sq-lite database
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+# DATABASES = {
+#         'default': {
+#             'ENGINE': 'djongo',
+#             'NAME': 'cluster0',
+#             'ENFORCE_SCHEMA': False,
+#             'CLIENT': {
+#                 'host': 'mongodb+srv://rushi1192:career-cloud@cluster0.wtallni.mongodb.net/?retryWrites=true&w=majority'
+#             }  
+#         }
+# }
 
 WHITENOISE_USE_FINDERS = True
 # Password validation
