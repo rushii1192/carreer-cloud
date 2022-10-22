@@ -52,9 +52,5 @@ This is the django project used by various companies to provide the online jobs.
  
 ---------
 
-* ### How to run the project
-  1) Clone your project.
-  2) Install python in your system and create virtual environment.
-  3) Activate virtual environment.
-  4) Install packages by using command pip install -r requirements.txt.
-  5) Run project by command python manage.py runserver.
+* ### View Live Site
+[Career Cloud](https://carrercloud.herokuapp.com/)
