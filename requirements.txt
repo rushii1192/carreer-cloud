@@ -1,6 +1,6 @@
 arabic-reshaper==2.1.1
 asgiref==3.3.1
-Django==3.2.5
+Django==3.0.5
 django-ckeditor==6.0.0
 django-filter==2.4.0
 django-js-asset==1.2.2
@@ -21,7 +21,6 @@ webencodings==0.5.1
 xhtml2pdf==0.2.5
 arabic-reshaper==2.1.1
 backports.zoneinfo==0.2.1
-dj-database-url==1.0.0
 django-ckeditor==6.0.0
 django-filter==2.4.0
 django-js-asset==1.2.2
