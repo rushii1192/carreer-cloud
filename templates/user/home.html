@@ -96,18 +96,18 @@
     <section class="category">
         <div class="container">
             <h1 class="category-title">
-                Explore <br> by category
+                JobBoard <br> Site Stats
             </h1>
             <div class="row">
                 <div class="col-4">
                     <div class="card">
                         <img src="{% static 'assets/images/home-images/card1.png' %}" alt="">
                         <h1 class="card-title">
-                            UI/UX Desgin
+                            Candidates
 
                         </h1>
                         <p class="card-descrif">
-                            215 Vacancy
+                            {{applicants_len}}
                         </p>
                     </div>
 
@@ -116,11 +116,11 @@
                     <div class="card">
                         <img src="{% static 'assets/images/home-images/card2.png' %}" alt="">
                         <h1 class="card-title">
-                            Web Design
+                            Jobs Posted
 
                         </h1>
                         <p class="card-descrif">
-                            320 Vacancy
+                            {{jobs_len}}
                         </p>
                     </div>
 
@@ -129,10 +129,10 @@
                     <div class="card">
                         <img src="{% static 'assets/images/home-images/card3.png' %}" alt="">
                         <h1 class="card-title">
-                            Web Development
+                            Jobs Filled
                         </h1>
                         <p class="card-descrif">
-                            625 Vacancy
+                            {{filled_job_len}}
                         </p>
                     </div>
 
@@ -141,11 +141,11 @@
                     <div class="card">
                         <img src="{% static 'assets/images/home-images/card4.png' %}" alt="">
                         <h1 class="card-title">
-                            Digital Marketing
+                            Companies
 
                         </h1>
                         <p class="card-descrif">
-                            780 Vacancy
+                            {{companies_len}}
                         </p>
                     </div>
 
