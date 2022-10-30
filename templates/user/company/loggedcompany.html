@@ -47,9 +47,10 @@
         <div id="new-sidebar">
             <div class="sidebar__title">
                 <div class="sidebar__img">
-                    {%if request.user == user and request.user.is_company %}
-                    <h1>{{ user.name }}</h1>
+                    {% if user.companyprofilemodel.logo %}
+                    <img src="{{user.companyprofilemodel.logo.url}}" style="width:70px;height:50px;" alt="logo" />
                     {% endif %}
+                    <h1 style="color: white;">{{ user.name }}</h1>
                 </div>
                 <i onclick="closeSidebar()" class="fa fa-times" id="sidebarIcon" aria-hidden="true"></i>
             </div>
@@ -59,6 +60,7 @@
                     <i class="fa fa-home"></i>
                     <a href="{% url 'home' %}">Dashboard</a>
                 </div>
+                {% if request.user.is_company %}
                 <div class="sidebar__link">
                     <i class="fa fa-user-secret" aria-hidden="true"></i>
                     <a href="{% url 'post-job' %}">Post a Job</a>
@@ -71,11 +73,12 @@
                     <i class="fa-solid fa-user"></i>
                     <a href="{% url 'company-edit-profile' %}">Profile</a>
                 </div>
+                
                 <div class="sidebar__link">
                     <i class="fa-solid fa-file-invoice"></i>
                     <a href="{{ user.payment_link }}">Pay Subscription Fee</a>
                 </div>
-                
+                {% endif %}
                     <div class="sidebar__logout">
                         <i class="fa fa-power-off"></i>
                         <a href="{% url 'logout' %}">Log out</a>
