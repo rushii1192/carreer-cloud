@@ -1,3 +1,4 @@
+from email.policy import default
 from ckeditor.fields import RichTextField
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 from django.core.validators import MaxValueValidator, MinValueValidator
@@ -61,6 +62,7 @@ class User(AbstractBaseUser):
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     is_admin = models.BooleanField(default=False)
+    payment_link = models.CharField(max_length=255,default="nil")
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['name']  # Email & Password are required by default.
