@@ -120,7 +120,7 @@ DATABASES = {
             'NAME': 'cluster0',
             'ENFORCE_SCHEMA': False,
             'CLIENT': {
-                'host': 'mongodb+srv://rushi1192:career-cloud@cluster0.wtallni.mongodb.net/?retryWrites=true&w=majority'
+                'host': 'your-mongodb-url'
             }  
         }
 }
